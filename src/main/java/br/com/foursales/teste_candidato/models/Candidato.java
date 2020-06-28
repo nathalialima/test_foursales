@@ -1,4 +1,4 @@
-package models;
+package br.com.foursales.teste_candidato.models;
 
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
@@ -23,7 +23,6 @@ public class Candidato {
     @Column(columnDefinition = "BINARY(16)")
     private UUID id;
 
-
     private String nome;
 
     @Column(unique = true)
@@ -33,6 +32,9 @@ public class Candidato {
 
     @ElementCollection
     private List<Telefone> telefones;
+
+    @ElementCollection
+    private List<CartaoCredito> cartoes;
 
     @CreationTimestamp
     private LocalDateTime created;

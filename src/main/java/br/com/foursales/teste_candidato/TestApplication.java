@@ -1,4 +1,4 @@
-package br.com.foursales.test;
+package br.com.foursales.teste_candidato;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

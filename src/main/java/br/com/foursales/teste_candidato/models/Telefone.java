@@ -1,4 +1,4 @@
-package models;
+package br.com.foursales.teste_candidato.models;
 
 import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
@@ -12,11 +12,7 @@ import java.util.UUID;
 @Embeddable
 @ToString
 public class Telefone {
-    @Id
-    @GeneratedValue(generator = "UUID")
-    @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
-    @Column(columnDefinition = "BINARY(16)")
-    private UUID id;
+
 
     private String numero;
 
