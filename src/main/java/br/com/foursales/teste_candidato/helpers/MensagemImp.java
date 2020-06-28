@@ -93,7 +93,7 @@ public class MensagemImp implements Mensagens{
     }
 
     @Override
-    public ResponseEntity mensagemErroCartaoAtualizado() {
+    public ResponseEntity mensagemSucessoCartaoAtualizado() {
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Type", "application/json; charset=utf-8");
         responseBody.put("mensagem",ConstantesMensagem.CARTAO_ATUALIZADO_SUCESSO);
