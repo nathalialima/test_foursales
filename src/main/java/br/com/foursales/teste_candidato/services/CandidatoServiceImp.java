@@ -6,7 +6,6 @@ import br.com.foursales.teste_candidato.repositories.CandidatoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -20,6 +19,7 @@ public class CandidatoServiceImp implements CandidatoService{
 
     @Autowired
     private CandidatoRepository candidatoRepository;
+
 
     @Override
     public ResponseEntity criarCandidato(Candidato candidato) {
@@ -94,7 +94,6 @@ public class CandidatoServiceImp implements CandidatoService{
     public ResponseEntity perfilCandidato(UUID id) {
         try {
             if(id == null){
-                System.out.println(1);
                 return this.mensagem.mensagemErroIdNaoExistente();
             }
 

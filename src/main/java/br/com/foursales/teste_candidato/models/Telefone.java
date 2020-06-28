@@ -13,7 +13,6 @@ import java.util.UUID;
 @ToString
 public class Telefone {
 
-
     private String numero;
 
     private String ddd;

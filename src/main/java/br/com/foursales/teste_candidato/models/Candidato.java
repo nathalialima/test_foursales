@@ -23,6 +23,7 @@ public class Candidato {
     @Column(columnDefinition = "BINARY(16)")
     private UUID id;
 
+
     private String nome;
 
     @Column(unique = true)
@@ -33,7 +34,8 @@ public class Candidato {
     @ElementCollection
     private List<Telefone> telefones;
 
-    @ElementCollection
+    @OneToMany(targetEntity = CartaoCredito.class, cascade = CascadeType.ALL)
+    @JoinColumn(name = "id_candidato")
     private List<CartaoCredito> cartoes;
 
     @CreationTimestamp
