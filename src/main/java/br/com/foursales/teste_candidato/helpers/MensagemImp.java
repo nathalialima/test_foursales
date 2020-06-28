@@ -83,4 +83,20 @@ public class MensagemImp implements Mensagens{
         responseBody.put("mensagem",ConstantesMensagem.NUMERO_CARTAO_NAO_EXISTE);
         return new ResponseEntity<>(responseBody, headers, HttpStatus.ACCEPTED.UNPROCESSABLE_ENTITY);
     }
+
+    @Override
+    public ResponseEntity mensagemErroCartaoNaoPertenceAoUsuarioInformado() {
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Content-Type", "application/json; charset=utf-8");
+        responseBody.put("mensagem",ConstantesMensagem.CARTAO_PERTENCE_A_OUTRO_CANDIDATO);
+        return new ResponseEntity<>(responseBody, headers, HttpStatus.ACCEPTED.UNPROCESSABLE_ENTITY);
+    }
+
+    @Override
+    public ResponseEntity mensagemErroCartaoAtualizado() {
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Content-Type", "application/json; charset=utf-8");
+        responseBody.put("mensagem",ConstantesMensagem.CARTAO_ATUALIZADO_SUCESSO);
+        return new ResponseEntity<>(responseBody, headers, HttpStatus.ACCEPTED.OK);
+    }
 }

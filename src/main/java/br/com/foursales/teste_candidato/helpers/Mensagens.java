@@ -12,4 +12,6 @@ public interface Mensagens {
     ResponseEntity mensagemSucessoCandidatoDeletado();
     ResponseEntity mensagemErroIdNaoExistente();
     ResponseEntity mensagemErroCartaoNaoExistente();
+    ResponseEntity mensagemErroCartaoNaoPertenceAoUsuarioInformado();
+    ResponseEntity mensagemSucessoCartaoAtualizado();
 }
