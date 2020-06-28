@@ -11,6 +11,7 @@ public class ConstantesMensagem {
     public static final String CADASTRO_CANDIDATO_SUCESSO = "Candidato cadastrado com sucesso";
     public static final String CADASTRO_CANDIDATO_ATUALIZADO_SUCESSO = "Candidato atualizado com sucesso";
     public static final String CANDIDATO_DELETADO_SUCESSO = "Candidato deletado com sucesso";
+    public static final String CARTAO_DELETADO_SUCESSO = "Cartão deletado com sucesso";
 
 
 

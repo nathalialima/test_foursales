@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.UUID;
+
 @RestController
 @RequestMapping("/cartoes")
 public class CartaoController {
@@ -18,6 +20,11 @@ public class CartaoController {
     @GetMapping("{numero_cartao}/candidato")
     public ResponseEntity visualizarCandidatoPorCartao(@PathVariable String numero_cartao){
         return  this.cartaoCreditoService.cartaoCandidato(numero_cartao);
+    }
+
+    @GetMapping("{numero_cartao}/{id_candidato}/candidato")
+    public ResponseEntity deletarCartaoPorCandidato(@PathVariable String numero_cartao, UUID id_candidato){
+        return  this.cartaoCreditoService.deletarCartaoPorCandidato(numero_cartao, id_candidato);
     }
 
 

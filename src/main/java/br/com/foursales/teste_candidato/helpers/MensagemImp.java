@@ -53,6 +53,14 @@ public class MensagemImp implements Mensagens{
     }
 
     @Override
+    public ResponseEntity mensagemSucessoCartaoDeletado() {
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Content-Type", "application/json; charset=utf-8");
+        responseBody.put("mensagem",ConstantesMensagem.CARTAO_DELETADO_SUCESSO);
+        return new ResponseEntity<>(responseBody, headers, HttpStatus.ACCEPTED.OK);
+    }
+
+    @Override
     public ResponseEntity mensagemSucessoCandidatoDeletado() {
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Type", "application/json; charset=utf-8");
@@ -65,6 +73,14 @@ public class MensagemImp implements Mensagens{
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Type", "application/json; charset=utf-8");
         responseBody.put("mensagem",ConstantesMensagem.ID_NAO_EXISTENTE);
+        return new ResponseEntity<>(responseBody, headers, HttpStatus.ACCEPTED.UNPROCESSABLE_ENTITY);
+    }
+
+    @Override
+    public ResponseEntity mensagemErroCartaoNaoExistente() {
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Content-Type", "application/json; charset=utf-8");
+        responseBody.put("mensagem",ConstantesMensagem.NUMERO_CARTAO_NAO_EXISTE);
         return new ResponseEntity<>(responseBody, headers, HttpStatus.ACCEPTED.UNPROCESSABLE_ENTITY);
     }
 }

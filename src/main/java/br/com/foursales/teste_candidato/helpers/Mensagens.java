@@ -8,6 +8,8 @@ public interface Mensagens {
     ResponseEntity mensagemErroException();
     ResponseEntity mensagemSucessoCandidato();
     ResponseEntity mensagemSucessoCandidatoAtualizado();
+    ResponseEntity mensagemSucessoCartaoDeletado();
     ResponseEntity mensagemSucessoCandidatoDeletado();
     ResponseEntity mensagemErroIdNaoExistente();
+    ResponseEntity mensagemErroCartaoNaoExistente();
 }
