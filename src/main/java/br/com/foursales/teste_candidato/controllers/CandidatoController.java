@@ -37,8 +37,8 @@ public class CandidatoController {
         return this.candidatoService.deletarCandidato(uuid);
     }
 
-    @GetMapping("/{uuid}/perfil")
-    public ResponseEntity perfil(@PathVariable UUID uuid){
+    @GetMapping("/{uuid}/visualizar")
+    public ResponseEntity visualizar(@PathVariable UUID uuid){
         return this.candidatoService.perfilCandidato(uuid);
     }
 }

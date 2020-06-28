@@ -9,5 +9,7 @@ import java.util.UUID;
 
 @Repository
 public interface CartaoCreditoRepository extends JpaRepository<CartaoCredito, UUID> {
+    Long countByNumero(String numero);
+    void deleteByNumeroAndCandidato_Id(String numero, UUID id);
     CartaoCredito findByNumero(String numero);
 }

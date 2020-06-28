@@ -53,6 +53,14 @@ public class MensagemImp implements Mensagens{
     }
 
     @Override
+    public ResponseEntity mensagemSucessoCandidatoDeletado() {
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Content-Type", "application/json; charset=utf-8");
+        responseBody.put("mensagem",ConstantesMensagem.CANDIDATO_DELETADO_SUCESSO);
+        return new ResponseEntity<>(responseBody, headers, HttpStatus.ACCEPTED.OK);
+    }
+
+    @Override
     public ResponseEntity mensagemErroIdNaoExistente() {
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Type", "application/json; charset=utf-8");

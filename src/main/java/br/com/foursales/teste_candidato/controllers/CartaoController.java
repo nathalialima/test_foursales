@@ -16,7 +16,9 @@ public class CartaoController {
     private CartaoCreditoService cartaoCreditoService;
 
     @GetMapping("{numero_cartao}/candidato")
-    public ResponseEntity cartaoCandidato(@PathVariable String numero_cartao){
+    public ResponseEntity visualizarCandidatoPorCartao(@PathVariable String numero_cartao){
         return  this.cartaoCreditoService.cartaoCandidato(numero_cartao);
     }
+
+
 }

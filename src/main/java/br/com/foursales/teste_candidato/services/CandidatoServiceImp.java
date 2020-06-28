@@ -20,7 +20,6 @@ public class CandidatoServiceImp implements CandidatoService{
     @Autowired
     private CandidatoRepository candidatoRepository;
 
-
     @Override
     public ResponseEntity criarCandidato(Candidato candidato) {
         try {
@@ -45,11 +44,10 @@ public class CandidatoServiceImp implements CandidatoService{
     public ResponseEntity atualizarCandidato(Candidato candidato) {
         try {
             if(candidato.getId() == null){
-                System.out.println(1);
                 return this.mensagem.mensagemErroIdNaoExistente();
             }
 
-            if(this.candidatoRepository.countById(candidato.getId()) == 0 ){
+            if(this.candidatoRepository.countById(candidato.getId()) == 0){
                 return this.mensagem.mensagemErroIdNaoExistente();
             }
 
@@ -75,7 +73,6 @@ public class CandidatoServiceImp implements CandidatoService{
     public ResponseEntity deletarCandidato(UUID id) {
         try {
             if(id == null){
-                System.out.println(1);
                 return this.mensagem.mensagemErroIdNaoExistente();
             }
 
@@ -84,7 +81,7 @@ public class CandidatoServiceImp implements CandidatoService{
             }
 
             this.candidatoRepository.deleteById(id);
-            return this.mensagem.mensagemSucessoCandidatoAtualizado();
+            return this.mensagem.mensagemSucessoCandidatoDeletado();
         }catch (Exception e){
             return this.mensagem.mensagemErroException();
         }
