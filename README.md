@@ -1,4 +1,4 @@
-# Teste Foursalses
+# Teste Foursales
 Crie uma aplicação que exponha uma API RESTful de gerenciamento para candidatos e seus cartões de crédito.
 O banco de dados da aplicacão é h2db
 A mesma também se encontra publicada no heroku, conforme links abaixo.
