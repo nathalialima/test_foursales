@@ -22,13 +22,13 @@ public class CartaoController {
         return  this.cartaoCreditoService.cartaoCandidato(numero_cartao);
     }
 
-    @GetMapping("{numero_cartao}/{id_candidato}/candidato")
-    public ResponseEntity deletarCartaoPorCandidato(@PathVariable String numero_cartao, UUID id_candidato){
+    @GetMapping("{numero_cartao}/{id_candidato}/deletar")
+    public ResponseEntity deletarCartaoPorCandidato(@PathVariable String numero_cartao, @PathVariable  UUID id_candidato){
         return  this.cartaoCreditoService.deletarCartaoPorCandidato(numero_cartao, id_candidato);
     }
 
-    @PostMapping(value = "{numero_cartao}/{id_candidato}/atualizar", consumes = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity atualizar(@RequestBody CartaoCredito cartaoCredito, @PathVariable String numero_cartao, UUID id_candidato){
+    @PostMapping(value = "/{numero_cartao}/{id_candidato}/atualizar", consumes = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity atualizar(@RequestBody CartaoCredito cartaoCredito, @PathVariable String numero_cartao, @PathVariable UUID id_candidato){
         return this.cartaoCreditoService.atualizarCartao(cartaoCredito, numero_cartao, id_candidato);
     }
 

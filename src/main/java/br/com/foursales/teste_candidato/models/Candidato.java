@@ -14,6 +14,8 @@ import java.util.UUID;
 @Setter
 @ToString
 @EqualsAndHashCode
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Data
 public class Candidato {

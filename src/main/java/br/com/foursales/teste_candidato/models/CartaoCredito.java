@@ -15,6 +15,8 @@ import java.util.UUID;
 @Setter
 @ToString
 @EqualsAndHashCode
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Data
 public class CartaoCredito {
@@ -24,7 +26,6 @@ public class CartaoCredito {
     @Column(columnDefinition = "BINARY(16)")
     private UUID id;
 
-    @Column(unique = true)
     private String numero;
 
     @OneToOne(targetEntity = Candidato.class)
